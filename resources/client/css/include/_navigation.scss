@@ -1,0 +1,60 @@
+.sidebar-nav {
+  background-color: $navigation-bg-color;
+  border-right: 1px solid $navigation-border-color;
+  padding: 14px 22px;
+
+  .nav-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      .nav-sub-container {
+        display: none;
+      }
+
+      &:hover .nav-sub-container {
+        display: block;
+      }
+
+      a {
+        color: $navigation-link-color;
+        display: block;
+        font-size: 0.9rem;
+        padding: 8px 10px;
+      }
+
+      a:hover, a:focus, a:active {
+        background-color: $navigation-link-bg-color-hover;
+        color: $navigation-link-color-hover;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav-separator {
+    margin: 8px 0;
+    border: 0;
+    border-bottom: 1px solid $navigation-separator-color;
+  }
+
+  .nav-item-icon {
+    padding-right: 5px;
+  }
+
+  .nav-item-arrow.fa:before {
+    content: "\f105";
+  }
+
+  .nav-sub-container {
+    background-color: $navigation-bg-color;
+    border: 1px solid $navigation-border-color;
+    box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, .1);
+    left: 207px;
+    margin-top: -41px;
+    padding: 12px;
+    position: fixed;
+    width: 210px;
+  }
+}

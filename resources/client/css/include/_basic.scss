@@ -1,0 +1,88 @@
+/** Loading Screen **/
+.splash {
+  text-align: center;
+  margin: 10% 0 0 0;
+  box-sizing: border-box;
+}
+
+.splash .message {
+  font-size: 72px;
+  line-height: 72px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.splash .fa-spinner {
+  text-align: center;
+  display: inline-block;
+  font-size: 72px;
+  margin-top: 50px;
+}
+
+/** Cards **/
+.card-default {
+  background-color: $brand-default-bg;
+  border-color: $brand-default-border;
+}
+
+/** Info Box **/
+.info-box {
+  color: white;
+}
+
+.info-box i {
+  display: block;
+  font-size: 60px;
+  width: 100px;
+  float: left;
+  text-align: center;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  margin-right: 20px;
+  padding-right: 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.info-box .count {
+  margin-top: -10px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.info-box .title {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.info-box .desc {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/** Validation **/
+.aurelia-validation-message {
+  display: inline;
+  margin-left: 5px;
+}
+
+.has-success label {
+  color: $state-success-text;
+}
+
+.has-warning label {
+  color: $state-warning-text;
+}
+
+/** colors **/
+.green {
+  color: #69aa46!important;
+}
+
+.red {
+  color: #dd5a43!important;
+}
+
+.pricing li {
+  color: #fff;
+}
