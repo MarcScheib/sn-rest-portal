@@ -1,0 +1,135 @@
+{
+  "name": "SN-Rest-Portal",
+  "version": "0.0.1",
+  "description": "Simple and modular REST Portal Example",
+  "keywords": [
+    "sn",
+    "rest",
+    "portal"
+  ],
+  "homepage": "http://www.cycrilab.com",
+  "private": true,
+  "author": "Marc Scheib <marc@cycrilab.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcScheib/sn-rest-portal"
+  },
+  "scripts": {
+    "start": "node server",
+    "mocha": "node node_modules/.bin/mocha packages/**/server/tests/**/*.js -R spec -r tools/test/mocha-req.js",
+    "karma": "node node_modules/karma/bin/karma start karma.conf.js",
+    "test": "npm run mocha && NODE_ENV=test npm run start & sleep 20 && npm run karma"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "compression": "^1.4.3",
+    "cookie-parser": "^1.3.4",
+    "errorhandler": "1.3.2",
+    "express": "4.12.3",
+    "express-session": "^1.10.4",
+    "jade": "1.9.2",
+    "method-override": "^2.3.2",
+    "morgan": "^1.5.2"
+  },
+  "devDependencies": {
+    "aurelia-cli": "^0.3.1",
+    "aurelia-tools": "^0.1.3",
+    "browser-sync": "^1.8.1",
+    "conventional-changelog": "0.0.11",
+    "del": "^1.1.0",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-bump": "^0.3.1",
+    "gulp-changed": "^1.1.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-minify-css": "^0.3.13",
+    "gulp-plumber": "^0.6.6",
+    "gulp-protractor": "^0.0.12",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.2",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-yuidoc": "^0.1.2",
+    "jasmine-core": "^2.1.3",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.28",
+    "karma-babel-preprocessor": "^5.2.1",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coverage": "^0.3.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-jspm": "2.0.1-beta.2",
+    "object.assign": "^1.0.3",
+    "require-dir": "^0.1.0",
+    "run-sequence": "^1.0.2",
+    "vinyl-paths": "^1.0.0",
+    "yargs": "^2.1.1"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public",
+      "lib": "public"
+    },
+    "dependencies": {
+      "aurelia-animator-css": "github:aurelia/animator-css@^0.16.0",
+      "aurelia-binding": "github:aurelia/binding@^0.9.0",
+      "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.17.0",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.10.0",
+      "aurelia-event-aggregator": "github:aurelia/event-aggregator@^0.8.0",
+      "aurelia-fetch-client": "github:aurelia/fetch-client@^0.2.0",
+      "aurelia-framework": "github:aurelia/framework@^0.16.0",
+      "aurelia-history": "github:aurelia/history@^0.7.0",
+      "aurelia-history-browser": "github:aurelia/history-browser@^0.8.0",
+      "aurelia-loader": "github:aurelia/loader@^0.9.0",
+      "aurelia-loader-default": "github:aurelia/loader-default@^0.10.0",
+      "aurelia-logging": "github:aurelia/logging@^0.7.0",
+      "aurelia-logging-console": "github:aurelia/logging-console@^0.7.1",
+      "aurelia-metadata": "github:aurelia/metadata@^0.8.0",
+      "aurelia-path": "github:aurelia/path@^0.9.0",
+      "aurelia-route-recognizer": "github:aurelia/route-recognizer@^0.7.0",
+      "aurelia-router": "github:aurelia/router@^0.12.0",
+      "aurelia-task-queue": "github:aurelia/task-queue@^0.7.0",
+      "aurelia-templating": "github:aurelia/templating@^0.15.0",
+      "aurelia-templating-binding": "github:aurelia/templating-binding@^0.15.0",
+      "aurelia-templating-resources": "github:aurelia/templating-resources@^0.15.0",
+      "aurelia-templating-router": "github:aurelia/templating-router@^0.16.0",
+      "aurelia-validation": "github:aurelia/validation@^0.2.8",
+      "bootstrap": "github:twbs/bootstrap@^4.0.0-alpha",
+      "clean-css": "npm:clean-css@^3.3.8",
+      "core-js": "npm:core-js@^0.9.4",
+      "css": "github:systemjs/plugin-css@^0.1.11",
+      "fetch": "github:github/fetch@^0.9.0",
+      "font-awesome": "github:FortAwesome/font-awesome@^4.4.0",
+      "jquery": "github:components/jquery@^2.1.4",
+      "nprogress": "github:rstacruz/nprogress@^0.1.6",
+      "text": "github:systemjs/plugin-text@^0.0.2",
+      "twbs/bootstrap": "github:twbs/bootstrap@4.0.0-alpha"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20"
+    },
+    "overrides": {
+      "github:twbs/bootstrap@4.0.0-alpha": {
+        "main": "dist/js/bootstrap",
+        "files": null,
+        "ignore": [
+          "dist/js/npm"
+        ],
+        "directories": {
+          "lib": "*"
+        },
+        "shim": {
+          "js/bootstrap": {
+            "deps": [
+              "jquery"
+            ],
+            "exports": "$"
+          }
+        },
+        "dependencies": {
+          "jquery": "github:components/jquery"
+        }
+      }
+    }
+  }
+}
